@@ -30,6 +30,10 @@ namespace test.ServiceLayer
             user.Email = Console.ReadLine();
             Console.WriteLine("Enter your password");
             user.Password = Console.ReadLine();
+            Console.WriteLine("Enter a security question");
+            user.securityQuestion = Console.ReadLine();
+            Console.WriteLine("Enter the Answer for the security question");
+            user.Answer = Console.ReadLine();
 
             var userDetails = db.Users.FirstOrDefault(u => u.Email == user.Email);
             if (userDetails is null)
