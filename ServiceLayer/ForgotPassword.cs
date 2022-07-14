@@ -16,7 +16,7 @@ namespace test.ServiceLayer
             {
                 Console.WriteLine(user.securityQuestion);
                 var ans = Console.ReadLine();
-                if(ans == user.Answer)
+                if (ans == user.Answer)
                 {
                     Console.WriteLine("Enter new password");
                     user.Password = Console.ReadLine();
@@ -25,7 +25,7 @@ namespace test.ServiceLayer
                         db.Users.Update(user);
                         db.SaveChanges();
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
                         Console.WriteLine(e.Message);
                     }
@@ -33,11 +33,14 @@ namespace test.ServiceLayer
                 else
                 {
                     Console.WriteLine("Invalid answer for security question");
-                    
+
                 }
-                
+            }
+            else
+            {
+                Console.WriteLine("User Not Found, Please try again with valid userID");
+            }
             }
 
         }
-    }
 }

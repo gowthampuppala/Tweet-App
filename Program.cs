@@ -8,7 +8,7 @@ namespace test
         {
             while (true)
             {
-                Console.WriteLine("Choose an Option : 1.User Registration 2.Login 3.Forgot Password");
+                Console.WriteLine("Choose an Option :    1.User Registration   2.Login    3.Forgot Password");
                 var option = Console.ReadLine();
                 if (option == "1")
                 {
